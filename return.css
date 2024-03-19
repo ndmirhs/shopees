@@ -1,0 +1,76 @@
+/* CSS for the entire page */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 80px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 69, 0, 0.5), 0 0 20px rgba(255, 69, 0, 0.5); /* Adding two shadows for an orange glow effect */
+}
+
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: orangered; 
+}
+
+form {
+  padding: 30px;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.product-info img {
+  width: 100px; 
+  margin-right: 20px;
+}
+
+.product-info div {
+  flex-grow: 1;
+}
+
+.product-info p {
+  margin: 5px 0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-group select,
+.form-group textarea,
+.form-group input[type="email"],
+.form-group input[type="submit"],
+.form-group input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: orangered;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: coral;
+}

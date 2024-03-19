@@ -1,0 +1,113 @@
+/* CSS for the entire page */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 10px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 69, 0, 0.5), 0 0 20px rgba(255, 69, 0, 0.5); /* Adding two shadows for an orange glow effect */
+}
+
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: orangered; 
+}
+
+form {
+  padding: 30px;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.product-info img {
+  width: 100px; 
+  margin-right: 20px;
+}
+
+.product-info div {
+  flex-grow: 1;
+}
+
+.product-info p {
+  margin: 5px 0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-group select,
+.form-group textarea,
+.form-group input[type="email"],
+.form-group input[type="submit"],
+.form-group input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: orangered;
+}
+
+.section {
+    
+    padding: 10px;
+    margin: 5px auto;
+    max-width: 500px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+	font-size:20px;
+    margin-top: 0;
+    color: black;
+}
+
+.section p,
+.section ul {
+	font-size:18px;
+    color: black;
+}
+
+.cancel-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cancel-button button {
+    background-color: #ff7b54;
+    color: white;
+    padding: 10px 150px;
+	font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cancel-button button:hover {
+    background-color: #d6563c;
+}

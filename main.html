@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>My Purchases</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 1000PX;
+        max-height: 1000PX;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 20px orangered;
+        text-align: center;
+    }
+    .logo {
+        display: block;
+        margin: 0 auto 20px;
+    }
+    .toolbar {
+        background-color: #ff7b54;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .logoutButton {
+        float: right; 
+        font-size: 16px; 
+        padding: 10px 10px;
+        background-color: #ff7b54;
+    }
+    .toolbar button {
+        background-color: #ff7b54;
+        color: black;
+        padding: 20px 20px;
+        border: none;
+        cursor: pointer;
+        margin: 5px;
+        border-radius: 5px;
+        font-size: 20px;
+        transition: background-color 0.3s;
+    }
+    .toolbar button:hover {
+        background-color: whitesmoke;
+    }
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+    .slideshow-container {
+        position: relative;
+        max-width: 100%;
+        margin:auto;
+    }
+
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
+
+    @-webkit-keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
+
+    .mySlides {
+        display: none;
+    }
+
+    img {
+        vertical-align: middle;
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+	<button onclick="window.location.href = 'index.html'" id="logoutButton" class="logoutButton">LOG OUT</button>
+	<br><br>
+    <img src="image/logoshp.png" alt="Logo" width="216" height="71" class="logo">
+    <h2> My Purchases </h2> 
+    <div class="toolbar">
+        <button onclick="window.location.href = 'ship.php'" id="shipButton">To Ship</button>
+        <button onclick="window.location.href = 'receive.php'" id="receiveButton">To Receive</button>
+        <button onclick="window.location.href = 'complete.php'" id="completeButton">Complete</button>
+        <button onclick="window.location.href = 'cancell.php'" id="cancelButton">Cancel</button>
+        <button onclick="window.location.href = 'return_refund.php'" id="refundButton">Refund/Receive</button>
+    </div>
+    <br>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="image/shoope2.jpg" alt="Moving Photo 1">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="image/shoppe.jpg" alt="Moving Photo 2">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="image/shopee.jpg" alt="Moving Photo 3">
+        </div>
+    </div>
+    <br>
+</div>
+<script>
+    var slideIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(carousel, 5000); // Change image every 2 seconds
+    }
+</script>
+</body>
+</html>
